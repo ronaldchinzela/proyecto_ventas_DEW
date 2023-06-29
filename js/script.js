@@ -36,7 +36,7 @@
 /*#############################################################################################*/
 //OBTENER EL TAMAÑO (ANCHO Y LARGO) DE UN ELEMENTO
 
-var divElement = document.querySelector(".vtex-store-header-2-x-headerRow");
+var divElement = document.querySelector(".vtex-store-header-2-x-headerRowContainer");
 
 if (divElement) {
   // Obtener las dimensiones del div en píxeles
