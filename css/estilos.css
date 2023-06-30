@@ -245,7 +245,7 @@ body, html {
 .dots {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px; /* Actualizado */
+  margin-bottom: 10px; 
 }
 
 .dot {
@@ -261,6 +261,76 @@ body, html {
   background-color: #ff0000;
 }
 
+/*ESTILOS PARA LAS OPCIONES DEL MENU*/
+.menu > ul > li > a {
+  position: relative;
+}
+
+.menu > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(145, 140, 140);
+  border-radius: 1.5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu > ul > li:hover > a::after {
+  transform: scaleX(1);
+}
+
+.menu li {
+  position: relative;
+  z-index: 10;
+}
+
+.menu li:hover .opciones {
+  display: block;
+}
+
+.menu .opciones {
+  display: none;
+  position: absolute;
+  transform: translateY(12%);
+  margin-top: 5px;
+
+}
+.menu li .opciones {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateY(12%);
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  z-index: 20;
+}
+.menu li:hover .opciones {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu .opciones li {
+  position: relative;
+}
+
+.menu .opciones li:hover a {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.menu .opciones li:hover {
+  transform: scale(1.1);
+}
+.menu .opciones a {
+  font-family: 'Roboto Flex';
+}
 /****RESPONSIVE******/
 /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
@@ -319,6 +389,41 @@ body, html {
     margin-top: 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

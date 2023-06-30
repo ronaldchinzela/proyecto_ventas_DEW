@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startCarousel() {
-    carouselInterval = setInterval(nextSlide, 2000);
+    carouselInterval = setInterval(nextSlide, 8000);
   }
 
   function bindEvents() {
@@ -91,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
   startCarousel();
   bindEvents();
 });
+
+/*#############################################################################################*/
+//MANTENER LA VISUALIZACIÓN DEL CUADRO DE OPCIONES DEL MENU DESPLEGABLE
 
 /*#############################################################################################*/
 //OBTENER EL TAMAÑO (ANCHO Y LARGO) DE UN ELEMENTO

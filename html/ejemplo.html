@@ -1,1 +1,96 @@
-<div class=""><div class="vtex-flex-layout-0-x-flexRow"><section class="vtex-store-components-3-x-container ph3 ph5-m ph2-xl mw9 center "><div class="flex mt6 mb0 pt0 pb0    justify-start vtex-flex-layout-0-x-flexRowContent items-stretch w-100"><div class="pr0 items-stretch vtex-flex-layout-0-x-stretchChildrenWidth   flex" style="width:100%"></div></div></section></div></div>
+<body>
+    <style>
+        .menu > ul > li > a {
+  position: relative;
+}
+
+.menu > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  border-radius: 1.5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu > ul > li:hover > a::after {
+  transform: scaleX(1);
+}
+
+/**/
+.menu li {
+  position: relative;
+  z-index: 10; 
+}
+
+.menu li:hover .opciones {
+  display: block;
+}
+
+.menu .opciones {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: auto;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  z-index: 20;
+}
+
+.menu .opciones li {
+  position: relative;
+}
+
+
+.menu .opciones li:hover a {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+    </style>
+
+<nav class="menu">
+    <ul>
+
+      <li class="menuOpciones">
+        <a href="#">HOMBRE</a>
+        <div class="dropdown">
+          <ul class="opciones">
+            <li><a href="#">Camisetas</a></li>
+            <li><a href="#">Pantalones</a></li>
+            <li><a href="#">Zapatos</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="menuOpciones">
+        <a href="#">NIÑA</a>
+        <div class="dropdown">
+          <ul class="opciones">
+            <li><a href="#">Vestidos</a></li>
+            <li><a href="#">Blusas</a></li>
+            <li><a href="#">Accesorios</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="menuOpciones">
+        <a href="#">ZAPATOS</a>
+        <div class="dropdown">
+          <ul class="opciones">
+            <li><a href="#">Vestidos</a></li>
+            <li><a href="#">Blusas</a></li>
+            <li><a href="#">Accesorios</a></li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </nav>
+</body>
