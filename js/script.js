@@ -93,8 +93,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /*#############################################################################################*/
-//MANTENER LA VISUALIZACIÓN DEL CUADRO DE OPCIONES DEL MENU DESPLEGABLE
+//OCULTAR EL ESLOGAN DEBAJO DEL MENU
+function ocultarDiv2() {
+  var div2 = document.querySelector(".div2");
+  div2.style.display = "none";
+}
 
+function mostrarDiv2() {
+  var div2 = document.querySelector(".div2");
+  div2.style.display = "block";
+}
 /*#############################################################################################*/
 //OBTENER EL TAMAÑO (ANCHO Y LARGO) DE UN ELEMENTO
 

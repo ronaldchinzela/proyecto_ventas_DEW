@@ -1,96 +1,40 @@
 <body>
-    <style>
-        .menu > ul > li > a {
-  position: relative;
-}
+  <div class="container">
 
-.menu > ul > li > a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: red;
-  border-radius: 1.5px;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
+    <nav class="menu">
+      <ul>
 
-.menu > ul > li:hover > a::after {
-  transform: scaleX(1);
-}
+        <li class="menuOpciones">
+          <a href="#">HOMBRE</a>
+          <div class="dropdown">
+            <ul class="opciones">
+              <li><a href="#">Camisetas</a></li>
+              <li><a href="#">Pantalones</a></li>
+              <li><a href="#">Zapatos</a></li>
+              <li><a href="#">Camisetas</a></li>
+              <li><a href="#">Pantalones</a></li>
+              <li><a href="#">Zapatos</a></li>
+            </ul>
+          </div>
+        </li>
 
-/**/
-.menu li {
-  position: relative;
-  z-index: 10; 
-}
+        <li class="menuOpciones">
+          <a href="#">MUJER</a>
+          <div class="dropdown">
+            <ul  class="opciones">
+              <li><a href="#">Vestidos</a></li>
+              <li><a href="#">Blusas</a></li>
+              <li><a href="#">Accesorios</a></li>
+              <li><a href="#">Camisetas</a></li>
+              <li><a href="#">Pantalones</a></li>
+              <li><a href="#">Zapatos</a></li>
+            </ul>
+          </div>
+        </li>
 
-.menu li:hover .opciones {
-  display: block;
-}
-
-.menu .opciones {
-  display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  width: auto;
-  padding: 10px;
-  background-color: white;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 3px;
-  z-index: 20;
-}
-
-.menu .opciones li {
-  position: relative;
-}
-
-
-.menu .opciones li:hover a {
-  border-bottom: 1px solid rgb(0, 0, 0);
-}
-
-    </style>
-
-<nav class="menu">
-    <ul>
-
-      <li class="menuOpciones">
-        <a href="#">HOMBRE</a>
-        <div class="dropdown">
-          <ul class="opciones">
-            <li><a href="#">Camisetas</a></li>
-            <li><a href="#">Pantalones</a></li>
-            <li><a href="#">Zapatos</a></li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="menuOpciones">
-        <a href="#">NIÑA</a>
-        <div class="dropdown">
-          <ul class="opciones">
-            <li><a href="#">Vestidos</a></li>
-            <li><a href="#">Blusas</a></li>
-            <li><a href="#">Accesorios</a></li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="menuOpciones">
-        <a href="#">ZAPATOS</a>
-        <div class="dropdown">
-          <ul class="opciones">
-            <li><a href="#">Vestidos</a></li>
-            <li><a href="#">Blusas</a></li>
-            <li><a href="#">Accesorios</a></li>
-          </ul>
-        </div>
-      </li>
-
-    </ul>
-  </nav>
+      </ul>
+    </nav>
+  </div>
+  
 </body>
+</html>
