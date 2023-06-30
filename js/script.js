@@ -32,28 +32,66 @@
 
 /*#############################################################################################*/
 // DESPLAZAMIENTO DE LAS IMÁGENES DEL BANNER PRINCIPAL
-window.addEventListener('DOMContentLoaded', function() {
-  var images = document.querySelectorAll('.banner2 img');
-  var currentImageIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let currentSlide = 0;
+  let carouselInterval;
 
-  function showImage(index) {
-    for (var i = 0; i < images.length; i++) {
-      images[i].classList.remove('active');
-    }
-
-    images[index].classList.add('active');
+  function showSlide(n) {
+    slides.forEach(function(slide) {
+      slide.classList.remove('active');
+    });
+    dots.forEach(function(dot) {
+      dot.classList.remove('active');
+    });
+    slides[n].classList.add('active');
+    dots[n].classList.add('active');
   }
 
-  function switchImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    showImage(currentImageIndex);
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
   }
 
-  showImage(currentImageIndex);
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
 
-  setInterval(switchImage, 2000);
+  function startCarousel() {
+    carouselInterval = setInterval(nextSlide, 2000);
+  }
+
+  function bindEvents() {
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    prevButton.addEventListener('click', function() {
+      prevSlide();
+      clearInterval(carouselInterval);
+      startCarousel();
+    });
+
+    nextButton.addEventListener('click', function() {
+      nextSlide();
+      clearInterval(carouselInterval);
+      startCarousel();
+    });
+
+    dots.forEach(function(dot, index) {
+      dot.addEventListener('click', function() {
+        showSlide(index);
+        clearInterval(carouselInterval);
+        startCarousel();
+      });
+    });
+  }
+
+  startCarousel();
+  bindEvents();
 });
-  
+
 /*#############################################################################################*/
 //OBTENER EL TAMAÑO (ANCHO Y LARGO) DE UN ELEMENTO
 
