@@ -1,5 +1,5 @@
 /*#############################################################################################*/
-// Código JavaScript para cambiar los textos en el Banner superior
+// CAMBIAR LOS TEXTOS EN EL BANNER SUPERIOR
 
   window.addEventListener('DOMContentLoaded', function () {
     var bannerParagraphs = document.querySelectorAll('.banner p');
@@ -31,7 +31,28 @@
   });
 
 /*#############################################################################################*/
+// DESPLAZAMIENTO DE LAS IMÁGENES DEL BANNER PRINCIPAL
+window.addEventListener('DOMContentLoaded', function() {
+  var images = document.querySelectorAll('.banner2 img');
+  var currentImageIndex = 0;
 
+  function showImage(index) {
+    for (var i = 0; i < images.length; i++) {
+      images[i].classList.remove('active');
+    }
+
+    images[index].classList.add('active');
+  }
+
+  function switchImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+  }
+
+  showImage(currentImageIndex);
+
+  setInterval(switchImage, 2000);
+});
   
 /*#############################################################################################*/
 //OBTENER EL TAMAÑO (ANCHO Y LARGO) DE UN ELEMENTO
