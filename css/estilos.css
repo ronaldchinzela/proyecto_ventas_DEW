@@ -202,10 +202,7 @@ body, html {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  height: 375px;
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-end; 
+  height: 500px; /* Ajusta la altura del carrusel según tu necesidad */
   margin-top: 20px;
 }
 
@@ -223,7 +220,7 @@ body, html {
 
 .slide img {
   width: 100%;
-  height: 375px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -245,9 +242,13 @@ body, html {
 }
 
 .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .dot {
@@ -266,6 +267,7 @@ body, html {
 /*ESTILOS PARA LAS OPCIONES DEL MENU*/
 .menu > ul > li > a {
   position: relative;
+  font-size: 14px;
 }
 
 .menu > ul > li > a::after {
@@ -330,8 +332,38 @@ body, html {
 .menu .opciones li:hover {
   transform: scale(1.1);
 }
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis-VariableFont_wght.ttf') format('truetype');
+}
 .menu .opciones a {
-  font-family: 'Roboto Flex';
+  font-family: 'Dosis';
+}
+/*ESTILOS PARA LAS IMÁGENES DEBAJO DEL CARRUSEL*/
+.imagenes {
+  display: flex;
+  justify-content: center;
+  max-width: calc(100% - 2cm);
+  margin-top: 1cm;
+}
+
+.left-images {
+  margin-right: 10px;
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+
+.right-image {
+  margin-left: 2mm;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 7mm;
+}
+.image-container {
+  margin-bottom: 15px; 
+}
+.right-image img {
+  height: 655px; 
 }
 /****RESPONSIVE******/
 /* Estilos para dispositivos móviles */
